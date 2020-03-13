@@ -1,6 +1,8 @@
 // code away!
+require('dotenv').config();
+
 const server = require('./server.js');
-const PORT = 5005
+const port = process.env.PORT || 5005
 server.listen(PORT, () => {
-    console.log(`\n*** Server Running on http://localhost:${PORT} ***\n`);
+    console.log(`\n*** Server Running on http://localhost:${port} ***\n`);
 });
